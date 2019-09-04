@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>K & H Personalized Medicine Lab</title>
+
+	<!-- For-Mobile-Apps -->
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="keywords" content="Classy Forms Widget Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+	<!-- //For-Mobile-Apps -->
+		<link rel="stylesheet" href="css/jquery-ui.min.css" type="text/css" media="all" />
+	<!-- Style --> <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+	<!-- Default-JavaScript-File --> <script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	
+
+	<!-- Web-Fonts -->
+		<link href='//fonts.googleapis.com/css?family=Raleway:400,500,600,700,800' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
+	<!-- //Web-Fonts -->
+	
+</head>
+<body>
+
+	<h1>Patient Sample Details</h1>
+
+	<div class="container">
+
+		<div class="tab">
+
+			<div id="horizontalTab" style="display: block; width: 100%; margin: 0px;">
+				<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
+				<script type="text/javascript">
+					$(document).ready(function () {
+						$('#horizontalTab').easyResponsiveTabs({
+							type: 'default', //Types: default, vertical, accordion
+							width: 'auto', //auto or any width like 600px
+							fit: true,   // 100% fit in a container
+							closed: 'accordion', // Start closed if in accordion view
+							activate: function(event) { // Callback function if tab is switched
+								var $tab = $(this);
+								var $info = $('#tabInfo');
+								var $name = $('span', $info);
+								$name.text($tab.text());
+								$info.show();
+							}
+						});
+
+						$('#verticalTab').easyResponsiveTabs({
+							type: 'vertical',
+							width: 'auto',
+							fit: true
+						});
+					});
+				</script>
+
+				<div class="tabs">
+
+					<div class="tab-left">
+						<ul class="resp-tabs-list">
+							<li class="resp-tab-item">Scan Barcode</li>
+							<li class="resp-tab-item">Generate Barcode</li>
+						</ul>
+					</div>
+
+					<div class="tab-right">
+						<div class="resp-tabs-container">
+							<div class="tab-1 resp-tab-content">
+								<div class="w3l-sign-in">
+									<h3>Scan Barcode to get Patient Details</h3>
+									<form action="#" method="post">
+										<input type="text" class="name" name="barcode" placeholder="Barcode" required="">
+										<input type="submit" value="Get Patient Details">
+										<div class="clear"></div>
+									</form>
+								</div>
+							</div>
+							<div class="tab-1 resp-tab-content">
+								<div class="register agileits">
+								<h3>Generate Barcode for Patient Samples</h3>
+									<form action="#" method="post">
+										<input type="text" class="name" name="patient-name" placeholder="Patient-Name" required="">
+										<script>
+											 $(function() {
+												$( "#dob" ).datepicker({
+													dateFormat:"dd/mm/yy",
+													 changeMonth: true,
+													changeYear: true,
+													yearRange: '-100:+0'
+												});
+												$( "#dob" ).datepicker({showOn: 'both'});
+											 });
+										</script>
+										<label for="dob"> Date of Birth </label>
+										<input type = "text" name= "dob" id = "dob" >
+										<input type="submit" value="Generate and Print Barcode">
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="clear"></div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+		<p> &copy; 2019 K & H Personalizsed Medicine Clinic | Design by Vamsi M Challa</p>
+	</div>
+
+</body>
+</html>
